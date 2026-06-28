@@ -25,8 +25,27 @@ const functionConst = "I'm a block-scoped const";
 }
 show();
 
-console.log(functionVar); // Throws ReferenceError
-console.log(functionLet); // Throws ReferenceError
-console.log(functionConst); // Throws ReferenceError
+//console.log(functionVar); // Throws ReferenceError
+//console.log(functionLet); // Throws ReferenceError
+//console.log(functionConst); // Throws ReferenceError
+
+{
+    let a = 3;
+    const b =5;
+    var c = 7;
+
+    a=4;
+    //b=6; //Throws scope_lab.js:38 Uncaught TypeError: Assignment to constant variable.
+    c=8;
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+a=5;
+b=7;
+c=9;
+console.log(a);
+console.log(b);
+console.log(c);// yes they can be assigned out of block, but they are considered as new variables
 
 
